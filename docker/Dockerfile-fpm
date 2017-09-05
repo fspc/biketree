@@ -13,4 +13,5 @@ RUN chown -R www-data:www-data /var/www/html; apk update; \
     apk add php5-mysql; \
     cp -a /etc/php5/*  /usr/local/etc/php; \
     cp /usr/lib/php5/modules/mysql.so  `php-config --extension-dir`/; \
+    sed -i 's/short_open_tag.*$/short_open_tag = On/' /usr/local/etc/php/php.ini;
 
