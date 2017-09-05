@@ -1,0 +1,71 @@
+version: '2'
+
+# git clone https://github.com/fspc/biketree.git 
+# This compose file uses jrcs/letsencrypt-nginx-proxy-companion
+
+# using nginx-alpine
+services:
+  biketree: 
+    container_name: biketree
+    build: . 
+    network_mode: "bridge"
+    #restart: always
+    environment:
+      - VIRTUAL_HOST=biketree.bikelover.org
+      - LETSENCRYPT_HOST=biketree.bikelover.org
+      - LETSENCRYPT_EMAIL="bike@bikelover.org"
+    links:
+      - fpm 
+    volumes:
+      - fpm:/usr/share/nginx/html
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # https://hub.docker.com/_/php/
+  fpm:
+    container_name: biketree-fpm
+    build:
+      context: ./
+      dockerfile: Dockerfile-fpm
+    #image: php:5-fpm-alpine
+    network_mode: "bridge"
+    #restart: always
+    environment:
+      - PHP_INI_DIR=/etc/php/
+    links:
+      - mysql
+    volumes:
+      - fpm:/var/www/html
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # https://hub.docker.com/_/mysql/
+  mysql:
+    container_name: biketree-mysql
+    image: mysql:5.5
+    network_mode: "bridge"
+    #restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=whatever
+      - MYSQL_USER=biketree
+      - MYSQL_PASSWORD=password
+      - MYSQL_DATABASE=biketree
+    volumes:
+      - data:/var/lib/mysql
+      - ./sql:/docker-entrypoint-initdb.d
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:
+  fpm:
+

@@ -1,0 +1,16 @@
+#############
+# biketree  #
+#############
+# Password is password for  & 
+
+FROM php:5-fpm-alpine 
+
+MAINTAINER Jonathan Rosenbaum <gnuser@gmail.com>
+
+# better hardwire www-data in the future in /etc/password
+# and make sure nginx also starts with same user
+RUN chown -R www-data:www-data /var/www/html; apk update; \
+    apk add php5-mysql; \
+    cp -a /etc/php5/*  /usr/local/etc/php; \
+    cp /usr/lib/php5/modules/mysql.so  `php-config --extension-dir`/; \
+
