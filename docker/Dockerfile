@@ -14,7 +14,6 @@ RUN git clone https://github.com/fspc/biketree.git /usr/share/nginx/html
 COPY  settings.php /usr/share/nginx/html
 COPY  default.conf /etc/nginx/conf.d
 RUN chown -R nginx:nginx /usr/share/nginx/html; mkdir /var/www; ln -sf /usr/share/nginx/html/ /var/www/html
-RUN chown -R nginx:nginx /var/www/html/images/
 
 VOLUME /usr/share/nginx/html 
 
