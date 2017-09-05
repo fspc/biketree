@@ -88,7 +88,7 @@ foreach($field as $key=>$value) { $$key = stripslashes($value); }
 
 }
 
-header( 'Location: /pos/home.php' ) ;
+header( 'Location: /home.php' ) ;
 
 ?>
 

@@ -155,6 +155,6 @@ if($action == "insert"){ echo "<center><h2>Important!!!</h2><h2>Tag this bike as
 
 <a href="index.php">Manage Bikes--></a>
 <br>
-<a href="/pos/home.php">Go Home--></a></center>
+<a href="/home.php">Go Home--></a></center>
 </body>
 </html>

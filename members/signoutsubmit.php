@@ -41,9 +41,9 @@ if(isset($_GET[switchID])){
 }		
 
 if($isAdmin){
-  header('Location: /pos/login.php');
+  header('Location: /login.php');
 }else{
-  header('Location: /pos/home.php');
+  header('Location: /home.php');
 }
 ?>
 
