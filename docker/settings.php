@@ -8,7 +8,7 @@ $cfg_email="jr@bikelover.org";
 $cfg_fax="";
 $cfg_website="http://biketree.wvcompletestreets.org";
 $cfg_other="";
-$cfg_server="mysql";
+$cfg_server="biketree-mysql";
 $cfg_database="biketree";
 $cfg_username="biketree";
 $cfg_password="password";
@@ -34,7 +34,7 @@ $cfg_administratorTitle="Administrator";
 $cfg_mechanicTitle="Mechanic";
 $cfg_mustOpen="0";
 # weird stuff has to use mysql host, this time 172.17.0.32 
-$db_host = "localhost";        
+$db_host = "biketree-mysql";        
 $db_user = "biketree";      
 $db_pwd = "password";
 $database = "biketree";
