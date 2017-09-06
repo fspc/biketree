@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 
 include ("../settings.php");
 include ("../language/$cfg_language");
