@@ -15,8 +15,8 @@ global $cfg_membershipID;
 
 if(!$sec->isLoggedIn())
 {
-        //header ("location: ../login.php");
-        //exit();
+        header ("location: ../login.php");
+        exit();
 }
 
 ?>
