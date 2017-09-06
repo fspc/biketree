@@ -202,13 +202,13 @@ if (!isset($_GET[userID]) || $_GET[userID] == ""){
 if (!isset($_GET[userID]) || $_GET[userID] == ""){
 
 	echo "<b>...register mailing list subscriptions</b>";
-	if($maillist1 == 1){$subscribeURL = "http://$cfg_mailmanLocation/mailman/admin/$cfg_mailmanListName1" . "_" . "$cfg_mailmanLocation/members/add?subscribees=$email&adminpw=$cfg_mailmanPass&send_welcome_msg_to_this_batch=0&send_notifications_to_list_owner=0";
+	if($maillist1 == 1){$subscribeURL = "https://$cfg_mailmanLocation/mailman/admin/$cfg_mailmanListName1" . "_" . "$cfg_mailmanLocation/members/add?subscribees=$email&adminpw=$cfg_mailmanPass&send_welcome_msg_to_this_batch=0&send_notifications_to_list_owner=0";
 	echo "<iframe scrolling=no src=\"$subscribeURL\" style=\"display: block;\" width=\"500\" height=\"80\"><p>Your browser does not support iframes.</p></iframe>";
 	}
-if($maillist2 == 1){$subscribeURL = "http://$cfg_mailmanLocation/mailman/admin/$cfg_mailmanListName2" . "_" . "$cfg_mailmanLocation/members/add?subscribees=$email&adminpw=$cfg_mailmanPass&send_welcome_msg_to_this_batch=0&send_notifications_to_list_owner=0";
+if($maillist2 == 1){$subscribeURL = "https://$cfg_mailmanLocation/mailman/admin/$cfg_mailmanListName2" . "_" . "$cfg_mailmanLocation/members/add?subscribees=$email&adminpw=$cfg_mailmanPass&send_welcome_msg_to_this_batch=0&send_notifications_to_list_owner=0";
         echo "<iframe scrolling=no src=\"$subscribeURL\" style=\"display: block;\" width=\"500\" height=\"80\"><p>Your browser does not support iframes.</p></iframe>";
         }
-if($maillist3 == 1){$subscribeURL = "http://$cfg_mailmanLocation/mailman/admin/$cfg_mailmanListName3" . "_" . "$cfg_mailmanLocation/members/add?subscribees=$email&adminpw=$cfg_mailmanPass&send_welcome_msg_to_this_batch=0&send_notifications_to_list_owner=0";
+if($maillist3 == 1){$subscribeURL = "https://$cfg_mailmanLocation/mailman/admin/$cfg_mailmanListName3" . "_" . "$cfg_mailmanLocation/members/add?subscribees=$email&adminpw=$cfg_mailmanPass&send_welcome_msg_to_this_batch=0&send_notifications_to_list_owner=0";
         echo "<iframe scrolling=no src=\"$subscribeURL\" style=\"display: block;\" width=\"500\" height=\"80\"><p>Your browser does not support iframes.</p></iframe>";
         }
 
