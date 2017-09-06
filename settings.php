@@ -6,7 +6,7 @@ WV, USA";
 $cfg_phone="123-456-7890";
 $cfg_email="jr@bikelover.org";
 $cfg_fax="";
-$cfg_website="http://biketree.wvcompletestreets.org";
+$cfg_website="https://biketree.bikelover.org";
 $cfg_other="";
 $cfg_server="mysql";
 $cfg_database="biketree";

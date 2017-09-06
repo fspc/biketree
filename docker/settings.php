@@ -6,7 +6,7 @@ WV, USA";
 $cfg_phone="123-456-7890";
 $cfg_email="jr@bikelover.org";
 $cfg_fax="";
-$cfg_website="http://biketree.wvcompletestreets.org";
+$cfg_website="https://biketree.bikelover.org";
 $cfg_other="";
 $cfg_server="biketree-mysql";
 $cfg_database="biketree";
@@ -33,7 +33,7 @@ $cfg_mechAutoSignin="option";
 $cfg_administratorTitle="Administrator";
 $cfg_mechanicTitle="Mechanic";
 $cfg_mustOpen="0";
-# weird stuff has to use mysql host, this time 172.17.0.32 
+# weird stuff has to use mysql host 
 $db_host = "biketree-mysql";        
 $db_user = "biketree";      
 $db_pwd = "password";
