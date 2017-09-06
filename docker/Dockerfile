@@ -3,7 +3,7 @@
 #############
 # Password is password for  & 
 
-# docker run -d --name bikebike --env VIRTUAL_HOST=bikebike.wvcompletestreets.org --expose 80 -v /home/freesource/public_html/bikebike:/usr/share/nginx/html nginx:1.11-alpine
+# docker run -d --name bikebike --env VIRTUAL_HOST=biketree.bikelover.org --expose 80 -v /somewhere/public_html/bikebike:/usr/share/nginx/html nginx:1.11-alpine
 
 FROM nginx:1.11-alpine
 

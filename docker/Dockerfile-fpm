@@ -10,8 +10,9 @@ MAINTAINER Jonathan Rosenbaum <gnuser@gmail.com>
 # better hardwire www-data in the future in /etc/password
 # and make sure nginx also starts with same user
 RUN chown -R www-data:www-data /var/www/html; apk update; \
-    apk add php5-mysql; \
+    apk add php5-mysql php5-gd; \
     cp -a /etc/php5/*  /usr/local/etc/php; \
     cp /usr/lib/php5/modules/mysql.so  `php-config --extension-dir`/; \
+    cp /usr/lib/php5/modules/gd.so  `php-config --extension-dir`/; \
     sed -i 's/short_open_tag.*$/short_open_tag = On/' /usr/local/etc/php/php.ini;
 
