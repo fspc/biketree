@@ -4,7 +4,7 @@ $cfg_address="Positive Spin,
 Morgantown,
 WV, USA";
 $cfg_phone="123-456-7890";
-$cfg_email="jr@bikelover.org";
+$cfg_email="bike@bikelover.org";
 $cfg_fax="";
 $cfg_website="https://biketree.bikelover.org";
 $cfg_other="";
