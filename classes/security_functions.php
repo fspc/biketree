@@ -126,11 +126,13 @@ class security_functions
 
 	function closeSale()
 	{
-		//deletes sessions vars 
-      session_unregister('items_in_sale'); 
-    	session_unregister('current_sale_customer_id'); 
-    	session_unregister('current_item_search'); 
-    	session_unregister('current_customer_search'); 
+
+	//deletes sessions vars
+        unset($_SESSION['items_in_sale']);                                      
+        unset($_SESSION['current_sale_customer_id']);                           
+        unset($_SESSION['current_sale_customer_id']);
+        unset($_SESSION['current_customer_search']);
+ 
 	}
 
 	function checkMembership($userID)
