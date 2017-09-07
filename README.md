@@ -7,3 +7,12 @@ Originally developed by Mark Leigh for [Bike Root](http://bikeroot.ca/) in Calga
 Demo at [https://biketree.bikelover.org](https://biketree.bikelover.org)<br>
 Logins: kelsey (Admin), mark (Sales Clerk)<br> 
 Password: password
+
+## Recommended Installation
+
+```
+cd docker;
+docker-compose -p biketree build;
+docker-compost -p biketree up -d;
+```
+
