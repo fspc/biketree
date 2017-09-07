@@ -4823,8 +4823,8 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`first_name`, `last_name`, `username`, `password`, `type`, `id`, `customerID`, `settings`) VALUES
-('Mark', 'Leigh', 'mark', '', 'Sales Clerk', 2, 85, 0),
-('Kelsey', 'Lavoie', 'kelsey', '', 'Admin', 3, NULL, 0),
+('Mark', 'Leigh', 'mark', MD5('password'), 'Sales Clerk', 2, 85, 0),
+('Kelsey', 'Lavoie', 'kelsey', MD5('password'), 'Admin', 3, NULL, 0),
 ('Alex', 'Blue', 'Alex', '', 'Sales Clerk', 4, 4, 1),
 ('Michael', 'Godwin', 'Godwin', '', 'Sales Clerk', 5, 37, 1),
 ('Spencer', 'Hall', 's.hall', '', 'Sales Clerk', 17, NULL, 0),
