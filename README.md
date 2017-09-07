@@ -13,6 +13,6 @@ Password: password
 ```
 cd docker;
 docker-compose -p biketree build;
-docker-compost -p biketree up -d;
+docker-compose -p biketree up -d;
 ```
 
